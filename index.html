@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+	<title>Memes Generator</title>
+	<script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<header><h1>Memes Generator</h1></header>
+<main>
+	<div class="container">
+		<div class="row">
+			<figure class="col-8">
+				<canvas id="memeImage" width=500 height=500></canvas>
+			</figure>
+			<section class="col-4">
+  			<form>
+  				<div class="form-group">
+				    <label for="file">Load image:</label>
+				    <input type="file" class="form-control-file" id="file">
+				  </div>
+				  <div class="form-group">
+  					  <input class="form-control" type="text" placeholder="Upper Text" id="upper">
+  				</div>
+				  <div class="form-group">
+				    <input class="form-control" type="text" placeholder="Bottom Text" id="bottom">
+				  </div>
+				</form>
+			</section>
+		</div>
+	</div>
+</main>
+<footer class="footer">
+	<div class="container">
+  	<p>Posted by: Nadja Yanna Braga Ramos</p>
+  	<!--<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>-->
+  </div>
+</footer>
+
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
