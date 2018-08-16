@@ -34,7 +34,42 @@ function drawImage(src)
   image.src = src;
 }
 
+function textStyle(){
+  // Set the text style to that to which we are accustomed
+  ctx.lineWidth  = 3;
+  ctx.font = '36pt impact';
+  ctx.strokeStyle = 'black';
+  ctx.fillStyle = 'white';
+  ctx.textAlign = 'center';
+  ctx.lineJoin = 'round';
+  ctx.globalCompositeOperation='destination-over';
+}
+
+function addUpperText() {
+   // Draw the text
+  let text = $('#upper').val();
+  text = text.toUpperCase();
+  x = canvas.width/2;
+  y = 75;
+  ctx.strokeText(text, x, y);
+  ctx.fillText(text, x, y);
+}
+
+function addBottonText() {
+   // Draw the text
+  let text = $('#bottom').val();
+  text = text.toUpperCase();
+  x = canvas.width/2;
+  y = canvas.height - 50;
+  ctx.strokeText(text, x, y);
+  ctx.fillText(text, x, y);
+}
+
 $("#create").submit(function(e) {
     e.preventDefault();
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
     loadImage();
+    textStyle();
+    addUpperText();
+    addBottonText();
 });
